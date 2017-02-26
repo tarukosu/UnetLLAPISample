@@ -12,13 +12,13 @@ public class TextureReceiver : MonoBehaviour {
     private void Awake()
     {
         mainTexture = (Texture2D)GetComponent<Renderer>().material.mainTexture;
-    }
-    void Start () {
         NetworkManager.OnDataReceived += OnDataReceived;
     }
 
+    void Start () {
+    }
+
     void Update () {
-		
 	}
 
     void OnDataReceived(object o, LLAPINetworkEventArgs args)
