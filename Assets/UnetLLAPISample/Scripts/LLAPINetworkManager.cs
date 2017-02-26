@@ -21,8 +21,8 @@ namespace UnetLLAPISample {
     {
         public bool isServer = true;
         public string serverAddress = "127.0.0.1";
-        public int serverPort = 8888;
-        public int localPort = 8889;
+        public int serverPort = 8212;
+        public int localPort = 8213;
         public int maxConnection = 10;
         public bool verpose = false;
         public readonly int MaxBufferSize = 65535;
@@ -133,7 +133,7 @@ namespace UnetLLAPISample {
             var channelId = channelIdDictionary[qos];
             byte error;
             NetworkTransport.Send(hostId, connectionId, channelId, data, data.Length, out error);
-            Debug.Log("hoge");
+
             if (verpose)
             {
                 LogNetworkError(error);
